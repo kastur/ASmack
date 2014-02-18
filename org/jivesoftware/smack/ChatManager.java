@@ -119,10 +119,14 @@ public class ChatManager {
                 }
                 else {
                     chat = getThreadChat(message.getThread());
+
+                    // Never fallback to a "user chat" always create a new one for the threadid.
+                    /*
                     if (chat == null) {
                         // Try to locate the chat based on the sender of the message
                     	chat = getUserChat(message.getFrom());
                     }
+                    */
                 }
 
                 if(chat == null) {
